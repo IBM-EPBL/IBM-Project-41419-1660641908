@@ -1,0 +1,69 @@
+h1 {
+  font-family: "Merriweather", sans-serif;
+}
+
+h2 {
+  font-family: "Crimson Text", serif;
+  font-size: 15px;
+}
+
+h3 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.form {
+  position: fixed;
+  top: 0px;
+  z-index: 0;
+  background: #00000063;
+  width: 100%;
+  height: 114px;
+  padding: 0px;
+  text-align: center;
+  margin-left: -8px;
+}
+.cont {
+  width: 68%;
+  margin: auto;
+  margin-top: 50;
+  padding: 65px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+  background: #00000063;
+  color: white;
+}
+.form button {
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  outline: 0;
+  padding: 15px;
+  color: #ffffff;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: invert;
+  background: TRANSPARENT;
+  border: transparent;
+}
+
+.form button:hover,
+.form button:focus {
+  background: #ffffff17;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+  transform: translateY(-4px);
+  text-shadow: white;
+}
+
+.form button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
+}
+.btncont {
+  margin-top: 0px;
+}
+body {
+  background: linear-gradient(to left, #4d5ab6, #46f6ff);
+}

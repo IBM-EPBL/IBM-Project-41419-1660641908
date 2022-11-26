@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>CAD-NEWSTRACKER</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='news.css') }}"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="form">
+      <form>
+        <br /><br />
+        <div class="btncont">
+          <button style="margin-right: -2%" type="button">
+            NEWSTRACKER APP
+          </button>
+
+          <button
+            style="margin-left: 40%"
+            type="button"
+            onclick="window.location.href='/logout'"
+          >
+            LOGOUT
+          </button>
+
+          <button type="button" onclick="window.location.href='/dashboard'">
+            DASHBOARD
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <br /><br /><br /><br />
+
+    {% for news, author,publishedAt, desc,img,content,url in context %}
+
+    <br />
+    <div class="cont">
+      
+
+      <center><h1>{{news}}</h1></center>
+
+      <img style="height: 464px; width: 100%" src="{{img}}" alt="" /><br />
+
+      <h2>Published Time: {{publishedAt}}</h2>
+
+      <h2>Author: {{author}}</h2>
+      <br />
+
+      <h3>Description: {{desc}}</h3>
+      <br />
+
+      <h3>
+        Content: {{content}}<a href="{{url}}" target="blank">Read More...</a>
+      </h3>
+      <br />
+    </div>
+    {% endfor %}
+  </body>
+</html>
